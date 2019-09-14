@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.test.model.chucdanh" />
+	<import class="com.test.model.loaivanban" />
+	<import class="com.test.model.nhanvien" />
+	<import class="com.test.model.nhom" />
+	<import class="com.test.model.phongban" />
+	<import class="com.test.model.sovanban" />
+	<class name="com.test.model.impl.chucdanhImpl" table="chucdanh">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ma" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.test.model.impl.loaivanbanImpl" table="loaivanban">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.test.model.impl.nhanvienImpl" table="nhanvien">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.test.model.impl.nhomImpl" table="nhom">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.test.model.impl.phongbanImpl" table="phongban">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.test.model.impl.sovanbanImpl" table="sovanban">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

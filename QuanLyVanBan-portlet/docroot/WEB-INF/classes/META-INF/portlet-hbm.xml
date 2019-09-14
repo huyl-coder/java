@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="ispace.model.KieuVanBan" />
+	<import class="ispace.model.LoaiVanBan" />
+	<import class="ispace.model.LuanChuyen" />
+	<import class="ispace.model.NguoiDung" />
+	<import class="ispace.model.SoVanBan" />
+	<import class="ispace.model.VanBanDen" />
+	<import class="ispace.model.VanBanDi" />
+	<class name="ispace.model.impl.KieuVanBanImpl" table="kieuvanban">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="ispace.model.impl.LoaiVanBanImpl" table="loaivanban">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="ispace.model.impl.LuanChuyenImpl" table="luanchuyen">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="vanBanId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="vanbanid" />
+		<property name="kieuVanBan" type="com.liferay.portal.dao.orm.hibernate.LongType" column="kieuvanban" />
+		<property name="nguoiGui" type="com.liferay.portal.dao.orm.hibernate.LongType" column="nguoigui" />
+		<property name="nguoiNhan" type="com.liferay.portal.dao.orm.hibernate.LongType" column="nguoinhan" />
+		<property name="ngayGui" type="org.hibernate.type.TimestampType" column="ngaygui" />
+		<property name="ngayNhan" type="org.hibernate.type.TimestampType" column="ngaynhan" />
+		<property name="yKien" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ykien" />
+		<property name="hanXuLy" type="org.hibernate.type.TimestampType" column="hanxuly" />
+		<property name="yKienPhanHoi" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ykienphanhoi" />
+		<property name="ngayPhanHoi" type="org.hibernate.type.TimestampType" column="ngayphanhoi" />
+	</class>
+	<class name="ispace.model.impl.NguoiDungImpl" table="nguoidung">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="ispace.model.impl.SoVanBanImpl" table="sovanban">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="ispace.model.impl.VanBanDenImpl" table="vanbanden">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="soKiHieu" type="com.liferay.portal.dao.orm.hibernate.StringType" column="sokihieu" />
+		<property name="soVanBanId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="sovanbanid" />
+		<property name="loaiVanBanId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="loaivanbanid" />
+		<property name="date" type="org.hibernate.type.TimestampType" column="ngay" />
+		<property name="nguoiKiId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="nguoikiid" />
+	</class>
+	<class name="ispace.model.impl.VanBanDiImpl" table="vanbandi">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="soKiHieu" type="com.liferay.portal.dao.orm.hibernate.StringType" column="sokihieu" />
+		<property name="soVanBanId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="sovanbanid" />
+		<property name="loaiVanBanId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="loaivanbanid" />
+		<property name="date" type="org.hibernate.type.TimestampType" column="ngay" />
+		<property name="nguoiKiId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="nguoikiid" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="ispace.model.KieuVanBan">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+	</model>
+	<model name="ispace.model.LoaiVanBan">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+	</model>
+	<model name="ispace.model.LuanChuyen">
+		<field name="id" type="long" />
+		<field name="vanBanId" type="long" />
+		<field name="kieuVanBan" type="long" />
+		<field name="nguoiGui" type="long" />
+		<field name="nguoiNhan" type="long" />
+		<field name="ngayGui" type="Date" />
+		<field name="ngayNhan" type="Date" />
+		<field name="yKien" type="String" />
+		<field name="hanXuLy" type="Date" />
+		<field name="yKienPhanHoi" type="String" />
+		<field name="ngayPhanHoi" type="Date" />
+	</model>
+	<model name="ispace.model.NguoiDung">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+	</model>
+	<model name="ispace.model.SoVanBan">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+	</model>
+	<model name="ispace.model.VanBanDen">
+		<field name="id" type="long" />
+		<field name="soKiHieu" type="String" />
+		<field name="soVanBanId" type="long" />
+		<field name="loaiVanBanId" type="long" />
+		<field name="date" type="Date" />
+		<field name="nguoiKiId" type="long" />
+	</model>
+	<model name="ispace.model.VanBanDi">
+		<field name="id" type="long" />
+		<field name="soKiHieu" type="String" />
+		<field name="soVanBanId" type="long" />
+		<field name="loaiVanBanId" type="long" />
+		<field name="date" type="Date" />
+		<field name="nguoiKiId" type="long" />
+	</model>
+</model-hints>

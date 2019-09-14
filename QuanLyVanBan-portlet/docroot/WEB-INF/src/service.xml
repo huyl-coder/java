@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="ispace">
+	<author>PC</author>
+	<namespace>qlvb</namespace>
+
+	<entity local-service="true" name="LoaiVanBan" table="loaivanban" data-source="qlyvanbanDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="ten" db-name="ten" type="String" />
+	</entity>
+	
+	<entity local-service="true" name="SoVanBan" table="sovanban" data-source="qlyvanbanDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="ten" db-name="ten" type="String" />
+	</entity>
+	
+	<entity local-service="true" name="VanBanDen" table="vanbanden" data-source="qlyvanbanDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="soKiHieu" db-name="sokihieu" type="String" />
+		<column name="soVanBanId" db-name="sovanbanid" type="long" />
+		<column name="loaiVanBanId" db-name="loaivanbanid" type="long" />
+		<column name="date" db-name="ngay" type="Date" />
+		<column name="nguoiKiId" db-name="nguoikiid" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="VanBanDi" table="vanbandi" data-source="qlyvanbanDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="soKiHieu" db-name="sokihieu" type="String" />
+		<column name="soVanBanId" db-name="sovanbanid" type="long" />
+		<column name="loaiVanBanId" db-name="loaivanbanid" type="long" />
+		<column name="date" db-name="ngay" type="Date" />
+		<column name="nguoiKiId" db-name="nguoikiid" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="LuanChuyen" table="luanchuyen" data-source="qlyvanbanDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="vanBanId" db-name="vanbanid" type="long" />
+		<column name="kieuVanBan" db-name="kieuvanban" type="long" />
+		<column name="nguoiGui" db-name="nguoigui" type="long" />
+		<column name="nguoiNhan" db-name="nguoinhan" type="long" />
+		<column name="ngayGui" db-name="ngaygui" type="Date" />
+		<column name="ngayNhan" db-name="ngaynhan" type="Date" />
+		<column name="yKien" db-name="ykien" type="String" />
+		<column name="hanXuLy" db-name="hanxuly" type="Date" />
+		<column name="yKienPhanHoi" db-name="ykienphanhoi" type="String" />
+		<column name="ngayPhanHoi" db-name="ngayphanhoi" type="Date" />
+	</entity>
+	
+	<entity local-service="true" name="NguoiDung" table="nguoidung" data-source="qlyvanbanDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="ten" db-name="ten" type="String" />
+	</entity>
+	
+	<entity local-service="true" name="KieuVanBan" table="kieuvanban" data-source="qlyvanbanDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="ten" db-name="ten" type="String" />
+	</entity>
+	
+</service-builder>

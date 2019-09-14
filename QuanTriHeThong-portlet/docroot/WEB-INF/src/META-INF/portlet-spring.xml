@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.test.service.chucdanhLocalService" class="com.test.service.impl.chucdanhLocalServiceImpl" />
+	<bean id="com.test.service.chucdanhService" class="com.test.service.impl.chucdanhServiceImpl" />
+	<bean id="com.test.service.persistence.chucdanhPersistence" class="com.test.service.persistence.chucdanhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="danhmucDataSource" />
+	</bean>
+	<bean id="com.test.service.loaivanbanLocalService" class="com.test.service.impl.loaivanbanLocalServiceImpl" />
+	<bean id="com.test.service.loaivanbanService" class="com.test.service.impl.loaivanbanServiceImpl" />
+	<bean id="com.test.service.persistence.loaivanbanPersistence" class="com.test.service.persistence.loaivanbanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="danhmucDataSource" />
+	</bean>
+	<bean id="com.test.service.nhanvienLocalService" class="com.test.service.impl.nhanvienLocalServiceImpl" />
+	<bean id="com.test.service.nhanvienService" class="com.test.service.impl.nhanvienServiceImpl" />
+	<bean id="com.test.service.persistence.nhanvienPersistence" class="com.test.service.persistence.nhanvienPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="danhmucDataSource" />
+	</bean>
+	<bean id="com.test.service.nhomLocalService" class="com.test.service.impl.nhomLocalServiceImpl" />
+	<bean id="com.test.service.nhomService" class="com.test.service.impl.nhomServiceImpl" />
+	<bean id="com.test.service.persistence.nhomPersistence" class="com.test.service.persistence.nhomPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="danhmucDataSource" />
+	</bean>
+	<bean id="com.test.service.phongbanLocalService" class="com.test.service.impl.phongbanLocalServiceImpl" />
+	<bean id="com.test.service.phongbanService" class="com.test.service.impl.phongbanServiceImpl" />
+	<bean id="com.test.service.persistence.phongbanPersistence" class="com.test.service.persistence.phongbanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="danhmucDataSource" />
+	</bean>
+	<bean id="com.test.service.sovanbanLocalService" class="com.test.service.impl.sovanbanLocalServiceImpl" />
+	<bean id="com.test.service.sovanbanService" class="com.test.service.impl.sovanbanServiceImpl" />
+	<bean id="com.test.service.persistence.sovanbanPersistence" class="com.test.service.persistence.sovanbanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="danhmucDataSource" />
+	</bean>
+</beans>

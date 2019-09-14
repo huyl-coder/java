@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.test">
+	<author>Duy Nguyen</author>
+	<namespace>QuanTriHeThong</namespace>
+
+	<entity local-service="true" name="chucdanh" table="chucdanh" data-source="danhmucDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="ten" db-name="ten" type="String" />
+		<column name="ma" db-name="ma" type="String" />
+	</entity>
+	
+	<entity local-service="true" name="phongban" table="phongban" data-source="danhmucDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="ten" db-name="ten" type="String" />
+	</entity>
+	
+	<entity local-service="true" name="nhanvien" table="nhanvien" data-source="danhmucDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="ten" db-name="ten" type="String" />
+	</entity>
+	
+	<entity local-service="true" name="nhom" table="nhom" data-source="danhmucDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="ten" db-name="ten" type="String" />
+	</entity>
+	
+	<entity local-service="true" name="loaivanban" table="loaivanban" data-source="danhmucDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="ten" db-name="ten" type="String" />
+	</entity>
+	
+	<entity local-service="true" name="sovanban" table="sovanban" data-source="danhmucDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="ten" db-name="ten" type="String" />
+	</entity>
+	
+</service-builder>

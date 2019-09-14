@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.test.model.chucdanh">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="ma" type="String" />
+	</model>
+	<model name="com.test.model.loaivanban">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+	</model>
+	<model name="com.test.model.nhanvien">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+	</model>
+	<model name="com.test.model.nhom">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+	</model>
+	<model name="com.test.model.phongban">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+	</model>
+	<model name="com.test.model.sovanban">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+	</model>
+</model-hints>

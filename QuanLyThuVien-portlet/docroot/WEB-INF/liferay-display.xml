@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.2.0//EN" "http://www.liferay.com/dtd/liferay-display_6_2_0.dtd">
+
+<display>
+	<category name="category.sample">
+		<portlet id="QuanLyThuVien" />
+		<portlet id="the-loai"></portlet>
+		<portlet id="sach"></portlet>
+		<portlet id="tim-kiem-sach"></portlet>
+		<portlet id="phieu-muon"></portlet>
+		<portlet id="gia-han"></portlet>
+	</category>
+</display>
